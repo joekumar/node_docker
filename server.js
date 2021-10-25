@@ -9,7 +9,7 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello World. Testing minikube new version. Repeating the process now....');
+  res.send('Hello World. Testing minikube new version. Github actions is awesome');
 });
 
 app.listen(PORT, HOST);
