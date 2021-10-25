@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-docker
+spec:
+  selector:
+    matchLabels:
+      app: node-web-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: node-web-app
+    spec:
+      containers:
+        - name: node-web-app
+          image: joekumar/node-web-app
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Never
